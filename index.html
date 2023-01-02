@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mason Hill</title>
+    <link href = 'style.css' rel = 'stylesheet'/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"/>
+  </head>
+  
+ 
+  <!--Start of website-->
+  <body>
+
+    <!--Personal Section-->
+    <div class="home" id="home">
+      <div class="home_container">
+        <h1 class="home_heading"> Welcome to the fantasy hockey scheduling optimizer!</h1>
+        <p class ="home_description"> The scheduling optimizer will allow you to make more informed decisions on what teams to 
+         pickup players from and in what positions based on how many games they have in their schedule. </p>
+      </div>
+    </div>
+
+    <form>
+      <label for="teams"> C1</label>
+      <select name="teams" id="C1" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+      </form>
+      <form>
+      <label for="teams"> C2</label>
+      <select name="teams" id="C2" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form> 
+    <form>
+      <label for="teams"> Lw1</label>
+      <select name="teams" id="Lw1" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> Lw2</label>
+      <select name="teams" id="Lw2" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> Rw1</label>
+      <select name="teams" id="Rw1" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> Rw2</label>
+      <select name="teams" id="Rw2" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> D1</label>
+      <select name="teams" id="D1" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> D2</label>
+      <select name="teams" id="D2" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> D3</label>
+      <select name="teams" id="D3" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> D4</label>
+      <select name="teams" id="D4" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> G1</label>
+      <select name="teams" id="G1" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> G2</label>
+      <select name="teams" id="G2" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> BN</label>
+      <select name="teams" id="userStuff" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> BN</label>
+      <select name="teams" id="userStuff" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> BN</label>
+      <select name="teams" id="userStuff" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+    <form>
+      <label for="teams"> BN</label>
+      <select name="teams" id="userStuff" onchange="showAlert(this.id)">
+      <option value="" selected disabled hidden>Choose here</option>
+        <optgroup label ="Atlantic Teams">
+          <option value="Bos">Boston Bruins</option>
+          <option value="Buf">Buffalo Sabres</option>
+          <option value="Detr">Detroit Red Wings</option>
+          <option value="Flor">Florida Panthers</option>
+          <option value="Mont">Montreal Canadiens</option>
+          <option value="Ott">Ottawa Senators</option>
+          <option value="Tampa">Tampa Bay Lightning</option>
+          <option value="Tor">Toronto Maple Leafs</option>
+        </optgroup>
+        <optgroup label="Metropolitan Teams">
+          <option value ="Car">Carolina Hurricanes</option>
+          <option value ="CBJ">Columbus Blue Jackets</option>
+          <option value ="NJD">New Jersey Devils</option>
+          <option value ="NYI">New York Islanders</option>
+          <option value ="NYR">New York Rangers</option>
+          <option value ="Phil">Philadelphia Flyers</option>
+          <option value ="Pitt">Pittsburgh Penguins</option>
+          <option value ="Washington Capitals"></option>
+        </optgroup>
+        <optgroup label="Central Teams">
+          <option value="Ari">Arizona Coyotes</option>
+          <option value="Chi">Chicago Blackhawks</option>
+          <option value="Col">Colorado Avalanche</option>
+          <option value="Dal">Dallas Stars</option>
+          <option value="Min">Minnesota Wild</option>
+          <option value="Nash">Nashville Predators</option>
+          <option value="STL">St. Louis Blues</option>
+          <option value="Win">Winnipeg Jets</option>
+        </optgroup>
+        <optgroup label="Pacific Teams">
+          <option value="Ana">Anaheim Ducks</option>
+          <option value="Cal">Calgary Flames</option>
+          <option value="Edm">Edmonton Oilers</option>
+          <option value="LAK">LA Kings</option>
+          <option value="SJS">San Jose Sharks</option>
+          <option value="Sea">Seattle Kraken</option>
+          <option value="Van">Vancouver Canucks</option>
+          <option value="VGK">Vegas Golden Knights</option>
+        </optgroup>
+      </select>
+    </form>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>
