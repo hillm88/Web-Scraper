@@ -25,6 +25,8 @@ Outline:
 
 
 My tech stack:
+Currently using react and javascript for front end, and for backend using Express and node.js  
+  
 UI library is sevelte
 meta framerwork is svelte kit for server side rendering.
 Use typescrist
