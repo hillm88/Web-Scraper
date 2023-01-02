@@ -22,3 +22,13 @@ Outline:
 <li>Find optimial team to replace player being dropped
  <ol><li>See if adding a player will get the user more games
  </li></ol>
+
+
+My tech stack:
+UI library is sevelte
+meta framerwork is svelte kit for server side rendering.
+Use typescrist
+to manage css use tailwind css.
+For backend use firebase
+Database is firestore but hopefully an sql type.
+For testing use cypress
